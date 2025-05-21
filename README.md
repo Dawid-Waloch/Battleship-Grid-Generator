@@ -1,6 +1,6 @@
-# 🚢 Battleship Grid Generator (C# Console App)
+# Battleship Grid Generator (C# Console App)
 This is a simple console-based C# program that simulates automatic placement of ships on a Battleship game board. It generates a 10x10 grid and places ships of varying lengths (from 4-mast to 1-mast) while ensuring valid positions and surrounding restrictions according to classic Battleship rules.
-## 🎮 Features
+## Features
 - Randomized ship placement on a 10x10 game board
 - Ship types:
   - 1 × 4-mast ship
@@ -10,26 +10,15 @@ This is a simple console-based C# program that simulates automatic placement of 
 - Collision and boundary prevention
 - Surrounding water (buffer) zones added to prevent adjacent ships
 - Console output of the final board state:
-  - 1 = ship
-  - 2 = surrounding buffer (cannot place other ships here)
-  - 0 = empty cell (visible as 0 in output)
- ## 📦 How It Works
+  - `1` = ship
+  - `2` = surrounding buffer (cannot place other ships here)
+  - `0` = empty cell (visible as 0 in output)
+ ## How It Works
 - The board is initialized as a 12x12 array to simplify boundary checks.
 - The program attempts to place ships of decreasing size in valid directions (up, down, left, right).
 - Each ship is surrounded by 2s to mark restricted zones (no adjacent ships allowed).
 - Final output prints the 10x10 visible game board with the ship layout.
-## 🚀 How to Run
-1. Make sure you have .NET SDK installed.
-2. Save the code to a file named Program.cs.
-3. Open a terminal in the project directory and run:
-```bash
-dotnet new console -n BattleshipApp
-cd BattleshipApp
-# Replace auto-generated Program.cs with your version
-cp ../Program.cs .
-dotnet run
-```
-## 🖼️ Example Output
+## Example Output
 ```python-repl
 0 0 0 0 0 0 0 0 0 0 
 0 0 0 1 1 1 0 1 0 0 
